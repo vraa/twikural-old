@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cronentries>
+  <cron>
+    <url>/updatesubscribers</url>
+    <description>Update Twitter subscribers</description>
+    <schedule>every 1 hours</schedule>
+  </cron>
+  <cron>
+    <url>/twikural</url>
+    <description>Send out DMs</description>
+    <schedule>every day 09:00</schedule>
+    <timezone>Asia/Kolkata</timezone>
+  </cron>
+  <cron>
+    <url>/twikural</url>
+    <description>Send out DMs</description>
+    <schedule>every day 18:00</schedule>
+    <timezone>Asia/Kolkata</timezone>
+  </cron>
+</cronentries>

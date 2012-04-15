@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<form method="post" action="setup">
+		<input type="password" name="pin" /><br/>
+		<textarea rows="30" cols="80" name="data"></textarea>
+		<input type="button" value="Go" />
+	</form>
+	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var kurals;
+			$('[type="button"]').click(function() {
+				kurals = $.parseJSON($('textarea').val());
+				upload(0);
+			});
+
+			function upload(index) {
+				var kural = kurals[index];
+				var pin = $('[name="pin"]').val();
+				if(kural == undefined) return;
+				$.post('setup', {
+					id : kural.id,
+					tamil : kural.tamil,
+					kalaignar : kural.kalaignar,
+					muva : kural.muva,
+					pops : kural.pops,
+					english : kural.english,
+					explain : kural.explain, 
+					pin : pin
+				}, function(){
+					console.log('success');
+					upload(index+1);
+				});
+			}
+		});
+	</script>
+</body>
+</html>

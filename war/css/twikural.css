@@ -1,0 +1,42 @@
+@CHARSET "UTF-8";
+
+body {
+	background:#f4f4f4 url(../img/bg.png);
+	margin-top:20px;
+}
+
+#app .hero{
+	margin-top:2em;
+	margin-bottom:2em;
+	background-color:rgba(254,254,254,0.5);
+	border-radius:10px;
+}
+	#app .hero h1{
+		line-height:2em;
+		font-size:1.5em;
+		letter-spacing:.1em;
+		opacity:.8;
+		margin-top:10px;
+	}
+	.hero .photo{
+		height:80px;
+		border-radius:50px;
+		margin:10px;
+	}
+	.hero .share{
+		
+	}
+.actions{
+	text-align:right;
+}
+
+.explanation p{
+	line-height:2em;
+}
+
+
+.explanation .photo{
+	width:100px;
+	border-radius:50px;
+	opacity:.7;
+	}
