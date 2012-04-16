@@ -18,7 +18,7 @@
 		<title>Twikural - தினம் இரு திருக்குறள்</title>
 		
 	</head>
-	<body id="app">
+	<body id="app" class="subscribe">
 		<div class='container'>
 			<div class='row'>
 				<div class='span4'>
@@ -28,19 +28,50 @@
 			
 			<article class='hero-unit'>
 				<h1>
-					To Subscribe, Follow Us / Like Us
+					To Subscribe, Follow Us or Like Us
 				</h1>
+				<p>After you've subscribed, from the next day onwards, you'll get a Thirukkural sent to you (either a Twitter direct message / Facebook Update).</p>
 				<br/><br/>
 				<div class='row'>
-					<div class='span2'>
+					<div class='span3'>
 						<a href="https://twitter.com/twikural" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @twikural</a>
+						<br/>
+						<br/>
+						<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+						<script>
+						new TWTR.Widget({
+						  version: 2,
+						  type: 'profile',
+						  rpp: 2,
+						  interval: 30000,
+						  width: 250,
+						  height: 300,
+						  theme: {
+						    shell: {
+						      background: '#b3c987',
+						      color: '#fdfffa'
+						    },
+						    tweets: {
+						      background: '#f5f5f5',
+						      color: '#594c59',
+						      links: '#175c91'
+						    }
+						  },
+						  features: {
+						    scrollbar: false,
+						    loop: false,
+						    live: false,
+						    behavior: 'all'
+						  }
+						}).render().setUser('twikural').start();
+						</script>
 					</div>
 					<div class='span4'>
-						<div class="fb-like-box" data-href="https://www.facebook.com/twikural" data-width="292" data-show-faces="true" data-stream="false" data-header="false"></div>
+						<br/><br/><br/>	
+						<div class="fb-like-box" data-href="https://www.facebook.com/twikural" data-width="292" data-show-faces="true" data-stream="false" data-header="true"></div>
 					</div>
 				</div>
-				<br/><br/>
-				<p>After you subscribed, from the next day onwards, you'll get a Thirukkural sent to you (either a Twitter direct message / Facebook Update).</p>
+
 			</article>
 			
 		</div>

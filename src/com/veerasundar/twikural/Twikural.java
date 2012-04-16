@@ -29,6 +29,10 @@ public class Twikural extends HttpServlet {
 
 	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		
+		if (req.getHeader("X-AppEngine-Cron") == null) {
+			return;
+		}
+		
 		logger.log(Level.INFO, "Starting the scheduled task of sending out kurals");
 
 		TwikuralData tdata = null;

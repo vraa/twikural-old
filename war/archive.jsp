@@ -64,11 +64,10 @@
 				</div>
 			<hr/>			
 			
-			<footer class='row'>
-				<div class='span4'>
-					Created by <a href='http://twitter.com/vraa'>@vraa</a>
-				</div>
+			<footer class='row credits'>
+				Developed by <a href="http://veerasundar.com">Veera</a> : For feedback, contact <a href="mailto:veera.k.sundar@gmail.com">veera.k.sundar@gmail.com</a>
 			</footer>
+			
 		</div>
 		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 		<div id="fb-root"></div>

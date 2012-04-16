@@ -5,6 +5,10 @@ body {
 	margin-top:20px;
 }
 
+body a{
+	color:#005580;
+}
+
 #app .hero{
 	margin-top:2em;
 	margin-bottom:2em;
@@ -23,9 +27,9 @@ body {
 		border-radius:50px;
 		margin:10px;
 	}
-	.hero .share{
-		
-	}
+#app.subscribe .hero-unit p{
+	font-size:13px!important;
+}
 .actions{
 	text-align:right;
 }
@@ -40,3 +44,7 @@ body {
 	border-radius:50px;
 	opacity:.7;
 	}
+
+footer{
+	margin-top:50px;
+}

@@ -52,23 +52,23 @@
 			<article class='hero row'>
 				<div class='span2'>
 					<% if(request.getAttribute("prev") != null){ %>
-						<br/><br/>
+						<br/><br/><br/>
 						<a href="kural?id=<%= request.getAttribute("prev") %>" class="btn"><i class="icon-arrow-left"></i> Previous</a>
 					<% } %>
 				</div>
 				<div class='span1'>
 					<img src="img/valluvar.jpg" class='photo'/>
 				</div>
-				<div class="span6">
+				<div class="span7">
 					<h1><%= request.getAttribute("tamil") %></h1>
-				</div>
-				<div class='share span1'>
-					<br/><br/>
+					<br/>
 					<a href="https://twitter.com/share" class="twitter-share-button" data-via="twikural" data-size="large">Tweet</a>
+					<br/>
+					<br/>
 				</div>
 				<div class="span2">
 					<% if(request.getAttribute("next") != null){ %>
-						<br/><br/>
+						<br/><br/><br/>
 						<a href="kural?id=<%= request.getAttribute("next") %>" class="btn"><i class="icon-arrow-right"></i> Next</a>
 					<% } %>
 				</div>
@@ -103,6 +103,9 @@
 					</section>
 				</article>
 			</section>
+			<footer class='row credits'>
+				Developed by <a href="http://veerasundar.com">Veera</a> : For feedback, contact <a href="mailto:veera.k.sundar@gmail.com">veera.k.sundar@gmail.com</a>
+			</footer>
 		</div>
 		
 		<%-- 3rd party JS --%>

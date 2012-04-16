@@ -27,9 +27,15 @@ public class UpdateSubscribers extends HttpServlet {
 	final static PersistenceManager pm = PMF.get().getPersistenceManager();
 
 	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		
-		Key key = KeyFactory.createKey(TwikuralData.class.getSimpleName(), "twitter");
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+
+		if (req.getHeader("X-AppEngine-Cron") == null) {
+			return;
+		}
+
+		Key key = KeyFactory.createKey(TwikuralData.class.getSimpleName(),
+				"twitter");
 		TwikuralData subscribers;
 		try {
 			subscribers = pm.getObjectById(TwikuralData.class, key);
@@ -41,7 +47,7 @@ public class UpdateSubscribers extends HttpServlet {
 			subscribers = new TwikuralData();
 			subscribers.setKey(key);
 		}
-		
+
 		List<Long> idList = new ArrayList<Long>();
 		try {
 			IDs followersIDs = twitter.getFollowersIDs(-1);
@@ -51,8 +57,7 @@ public class UpdateSubscribers extends HttpServlet {
 		} catch (TwitterException e) {
 			e.printStackTrace();
 		}
-		
-		
+
 		subscribers.setFollowers(idList);
 		Transaction txn = pm.currentTransaction();
 		try {
