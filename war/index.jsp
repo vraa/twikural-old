@@ -52,23 +52,25 @@
 			<article class='hero row'>
 				<div class='span2'>
 					<% if(request.getAttribute("prev") != null){ %>
-						<br/><br/><br/>
+						<br/><br/><br/><br/><br/>
 						<a href="kural?id=<%= request.getAttribute("prev") %>" class="btn"><i class="icon-arrow-left"></i> Previous</a>
 					<% } %>
 				</div>
-				<div class='span1'>
-					<img src="img/valluvar.jpg" class='photo'/>
-				</div>
-				<div class="span7">
-					<h1><%= request.getAttribute("tamil") %></h1>
+				<div class='span2'>
 					<br/>
 					<a href="https://twitter.com/share" class="twitter-share-button" data-via="twikural" data-size="large">Tweet</a>
+					<img src="img/valluvar.jpg" class='photo'/>
+					<a href="subscribe.jsp" class="btn btn-danger"><i class='icon-star icon-white'></i> Subscribe</a>
 					<br/>
 					<br/>
+				</div>
+				<div class="span6"> 
+					<br/><br/><br/><br/>
+					<h1><%= request.getAttribute("tamil") %></h1>
 				</div>
 				<div class="span2">
 					<% if(request.getAttribute("next") != null){ %>
-						<br/><br/><br/>
+						<br/><br/><br/><br/><br/>
 						<a href="kural?id=<%= request.getAttribute("next") %>" class="btn"><i class="icon-arrow-right"></i> Next</a>
 					<% } %>
 				</div>

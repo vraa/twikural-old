@@ -23,9 +23,8 @@ body a{
 		margin-top:10px;
 	}
 	.hero .photo{
-		height:80px;
 		border-radius:50px;
-		margin:10px;
+		margin:10px 0;
 	}
 #app.subscribe .hero-unit p{
 	font-size:13px!important;
