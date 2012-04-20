@@ -1,3 +1,6 @@
+<%@page import="com.google.appengine.api.datastore.KeyFactory"%>
+<%@page import="com.google.appengine.api.datastore.Key"%>
+<%@page import="com.veerasundar.twikural.model.TwikuralData"%>
 <%@page import="com.veerasundar.twikural.model.Thirukural"%>
 <%@page import="com.veerasundar.twikural.PMF"%>
 <%@page import="javax.jdo.PersistenceManager"%>
@@ -23,7 +26,9 @@
 		<%
 			PersistenceManager pm = PMF.get().getPersistenceManager(); 
 			if(request.getAttribute("tamil") == null){
-				Thirukural kural = pm.getObjectById(Thirukural.class, 1L);
+				Key tDataKey = KeyFactory.createKey(TwikuralData.class.getSimpleName(), "twitter");
+				TwikuralData tData = pm.getObjectById(TwikuralData.class, tDataKey);
+				Thirukural kural = pm.getObjectById(Thirukural.class, tData.getNextKuralId()-1);
 				if(kural != null){
 					request.setAttribute("tamil", kural.getTamil().getValue());
 					request.setAttribute("kalaignar", kural.getKalaignar().getValue());
@@ -31,8 +36,9 @@
 					request.setAttribute("pops", kural.getPops().getValue());
 					request.setAttribute("english", kural.getEnglish().getValue());
 					request.setAttribute("explain", kural.getExplain().getValue());
-					request.setAttribute("id", 1);
-					request.setAttribute("next", Long.toString(2 + 10297, 16));
+					request.setAttribute("id", tData.getNextKuralId()-1);
+					request.setAttribute("next", Long.toString(tData.getNextKuralId() + 10297, 16));
+					request.setAttribute("prev", Long.toString(tData.getNextKuralId()-2 + 10297, 16));
 				}
 			}
 		%>
