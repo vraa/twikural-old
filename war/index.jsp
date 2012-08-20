@@ -18,11 +18,13 @@
 		<link type="text/css" rel="stylesheet" href="css/bootstrap-responsive.min.css" />
 		<link type="text/css" rel="stylesheet" href="css/twikural.css?58305" />
 		
+		<link href="http://feeds.feedburner.com/twikural" rel="alternate" type="application/rss+xml" title="Subscribe to Twikural via RSS" />
+		
 		<title>Twikural - தினம் இரு திருக்குறள்</title>
 		
 	</head>
 	<body id="app">
-		<%-- NOT RECOMMENDED. BUT FOR SIMIPLICITY AM USING SCRIPTLETS --%>
+		<%-- SCRIPTLETS NOT RECOMMENDED. BUT FOR SIMIPLICITY AM USING.  --%>
 		<%
 			PersistenceManager pm = PMF.get().getPersistenceManager(); 
 			if(request.getAttribute("tamil") == null){
@@ -73,6 +75,7 @@
 				<div class="span6"> 
 					<br/><br/><br/><br/>
 					<h1><%= request.getAttribute("tamil") %></h1>
+					<p class='seqno'>குறள் எண்: <%= request.getAttribute("id") %></p>
 				</div>
 				<div class="span2">
 					<% if(request.getAttribute("next") != null){ %>

@@ -15,6 +15,8 @@
 		<link type="text/css" rel="stylesheet" href="css/bootstrap-responsive.min.css" />
 		<link type="text/css" rel="stylesheet" href="css/twikural.css?58305" />
 		
+		<link href="http://feeds.feedburner.com/twikural" rel="alternate" type="application/rss+xml" title="Subscribe to Twikural via RSS" />
+		
 		<title>Twikural - தினம் இரு திருக்குறள்</title>
 		
 	</head>
@@ -34,41 +36,19 @@
 				<br/><br/>
 				<div class='row'>
 					<div class='span3'>
-						<a href="https://twitter.com/twikural" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @twikural</a>
+						<h2>Twitter</h2>
 						<br/>
-						<br/>
-						<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
-						<script>
-						new TWTR.Widget({
-						  version: 2,
-						  type: 'profile',
-						  rpp: 2,
-						  interval: 30000,
-						  width: 250,
-						  height: 300,
-						  theme: {
-						    shell: {
-						      background: '#b3c987',
-						      color: '#fdfffa'
-						    },
-						    tweets: {
-						      background: '#f5f5f5',
-						      color: '#594c59',
-						      links: '#175c91'
-						    }
-						  },
-						  features: {
-						    scrollbar: false,
-						    loop: false,
-						    live: false,
-						    behavior: 'all'
-						  }
-						}).render().setUser('twikural').start();
-						</script>
+						<p><a href="https://twitter.com/twikural" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @twikural</a></p>
 					</div>
 					<div class='span4'>
-						<br/><br/><br/>	
+						<h2>Facebook</h2>
+						<br/>
 						<div class="fb-like-box" data-href="https://www.facebook.com/twikural" data-width="292" data-show-faces="true" data-stream="false" data-header="true"></div>
+					</div>
+					<div class='span3'>
+						<h2>RSS Feed</h2>
+						<br/>
+						<p><a href="http://feeds.feedburner.com/twikural">Subscribe via RSS feed</a> so that you'll get notified in your favorite feed reader when we publish Thirukural.</p>
 					</div>
 				</div>
 

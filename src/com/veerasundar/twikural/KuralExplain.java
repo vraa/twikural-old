@@ -37,7 +37,7 @@ public class KuralExplain extends HttpServlet {
 					req.setAttribute("pops", kural.getPops().getValue());
 					req.setAttribute("english", kural.getEnglish().getValue());
 					req.setAttribute("explain", kural.getExplain().getValue());
-					req.setAttribute("id", kuralId);
+					req.setAttribute("id", kuralLong);
 
 					if (kuralLong > 1) {
 						req.setAttribute("prev", Long.toString(kuralLong - 1 + 10297, 16));
