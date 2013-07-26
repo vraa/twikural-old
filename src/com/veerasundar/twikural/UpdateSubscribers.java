@@ -29,11 +29,11 @@ public class UpdateSubscribers extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
-
+		
 		if (req.getHeader("X-AppEngine-Cron") == null) {
 			return;
 		}
-
+		
 		Key key = KeyFactory.createKey(TwikuralData.class.getSimpleName(),
 				"twitter");
 		TwikuralData subscribers;
