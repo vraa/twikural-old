@@ -8,7 +8,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 
@@ -16,10 +16,9 @@
 	content="Twikural is a free serice that sends Thirukural, every day directly to your Twitter/Facebook account." />
 <meta name="keyword"
 	content="thirukural, twikural, thiruvalluvar, tamil" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
-<link type="text/css" rel="stylesheet"
-	href="css/bootstrap-responsive.min.css" />
 <link type="text/css" rel="stylesheet" href="css/twikural.css?58305" />
 
 <link href="http://feeds.feedburner.com/twikural" rel="alternate"
@@ -67,21 +66,21 @@
 	%>
 	<div class='container'>
 		<header class='row'>
-			<div class='span6'>
+			<div class='col-md-6'>
 				<h2>twikural</h2>
 				<p>Sends Thirukural to your Twitter / Facebook, everyday morning
 					and evening.</p>
 			</div>
-			<div class='actions span3 offset3'>
+			<div class='actions col-md-3 col-md-offset-3'>
 				<a href="archive" class="btn btn-info"><i
-					class='icon-book icon-white'></i> Archives</a> &nbsp;&nbsp; <a
+					class='glyphicon glyphicon-book'></i> Archives</a> &nbsp;&nbsp; <a
 					href="subscribe.jsp" class="btn btn-danger"><i
-					class='icon-star icon-white'></i> Subscribe</a>
+					class='glyphicon glyphicon-star'></i> Subscribe</a>
 			</div>
 		</header>
 		<%-- Kural section --%>
 		<article class='hero row'>
-			<div class='span2'>
+			<div class='col-md-2'>
 				<%
 					if (request.getAttribute("prev") != null) {
 				%>
@@ -92,21 +91,21 @@
 					}
 				%>
 			</div>
-			<div class='span2'>
+			<div class='col-md-2'>
 				<br /> <a href="https://twitter.com/share"
 					class="twitter-share-button" data-via="twikural" data-size="large">Tweet</a>
 				<img src="img/valluvar.jpg" class='photo' /> <a
 					href="subscribe.jsp" class="btn btn-danger"><i
-					class='icon-star icon-white'></i> Subscribe</a> <br /> <br />
+					class='glyphicon glyphicon-star'></i> Subscribe</a> <br /> <br />
 			</div>
-			<div class="span6">
+			<div class="col-md-6">
 				<br /> <br /> <br /> <br />
 				<h1><%=request.getAttribute("tamil")%></h1>
 				<p class='seqno'>
 					குறள் எண்:
 					<%=request.getAttribute("id")%></p>
 			</div>
-			<div class="span2">
+			<div class="col-md-2">
 				<%
 					if (request.getAttribute("next") != null) {
 				%>
@@ -120,19 +119,19 @@
 		</article>
 		<%-- Kural explanation section --%>
 		<section class='row explanation'>
-			<article class='span4 kalaignar'>
+			<article class='col-md-4 kalaignar'>
 				<section class='content'>
 					<h3>கலைஞர்</h3>
 					<p><%=request.getAttribute("kalaignar")%></p>
 				</section>
 			</article>
-			<article class='span4 pops'>
+			<article class='col-md-4 pops'>
 				<section class='content'>
 					<h3>சாலமன் பாப்பையா</h3>
 					<p><%=request.getAttribute("pops")%></p>
 				</section>
 			</article>
-			<article class='span4 muva'>
+			<article class='col-md-4 muva'>
 				<section class='content'>
 					<h3>மு. வரதராசனார்</h3>
 					<p><%=request.getAttribute("muva")%></p>

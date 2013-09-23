@@ -10,9 +10,9 @@
 		
 		<meta name="description" content="Twikural is a free serice that sends Thirukural, every day directly to your Twitter/Facebook account." />
 		<meta name="keyword" content="thirukural, twikural, thiruvalluvar, tamil" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
-		<link type="text/css" rel="stylesheet" href="css/bootstrap-responsive.min.css" />
 		<link type="text/css" rel="stylesheet" href="css/twikural.css?58305" />
 		
 		<title>Twikural - தினம் இரு திருக்குறள்</title>
@@ -21,7 +21,7 @@
 	<body id="app">
 		<div class='container'>
 			<div class='row'>
-				<div class='span4'>
+				<div class='col-md-4'>
 					<a class='btn btn-danger' href="http://twikural.veerasundar.com"><i class='icon-arrow-left icon-white'></i> Back to Front page</a>
 				</div>
 			</div>
@@ -29,7 +29,7 @@
 			
 			<hr/>
 				<div class='row'>
-					<section class='tamil span12'>
+					<section class='tamil col-md-12'>
 						<h3>Archive</h3>
 						<table class='table table-condensed'>
 							<thead>

@@ -10,9 +10,9 @@
 		
 		<meta name="description" content="Twikural is a free serice that sends Thirukural, every day directly to your Twitter/Facebook account." />
 		<meta name="keyword" content="thirukural, twikural, thiruvalluvar, tamil" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
-		<link type="text/css" rel="stylesheet" href="css/bootstrap-responsive.min.css" />
 		<link type="text/css" rel="stylesheet" href="css/twikural.css?58305" />
 		
 		<link href="http://feeds.feedburner.com/twikural" rel="alternate" type="application/rss+xml" title="Subscribe to Twikural via RSS" />
@@ -23,8 +23,8 @@
 	<body id="app" class="subscribe">
 		<div class='container'>
 			<div class='row'>
-				<div class='span4'>
-					<a class='btn btn-danger' href="http://twikural.veerasundar.com"><i class='icon-arrow-left icon-white'></i> Back to Front page</a>
+				<div class='col-md-4'>
+					<a class='btn btn-danger' href="http://twikural.veerasundar.com"><span class="glyphicon glyphicon-arrow-left"></span> Back to Front page</a>
 				</div>
 			</div>
 			
@@ -35,17 +35,17 @@
 				<p>After you've subscribed, from the next day onwards, you'll get a Thirukkural sent to you (either a Twitter direct message / Facebook Update).</p>
 				<br/><br/>
 				<div class='row'>
-					<div class='span3'>
+					<div class='col-md-3'>
 						<h2>Twitter</h2>
 						<br/>
 						<p><a href="https://twitter.com/twikural" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @twikural</a></p>
 					</div>
-					<div class='span4'>
+					<div class='col-md-4'>
 						<h2>Facebook</h2>
 						<br/>
 						<div class="fb-like-box" data-href="https://www.facebook.com/twikural" data-width="292" data-show-faces="true" data-stream="false" data-header="true"></div>
 					</div>
-					<div class='span3'>
+					<div class='col-md-3'>
 						<h2>RSS Feed</h2>
 						<br/>
 						<p><a href="http://feeds.feedburner.com/twikural">Subscribe via RSS feed</a> so that you'll get notified in your favorite feed reader when we publish Thirukural.</p>
